@@ -1,0 +1,10 @@
+[
+  {
+    "column_name": "Fake org",
+    "filter": "_source=http://example.com/Organization/123"
+  },
+  {
+    "column_name": "With name",
+    "filter": "given=valueGiven&family=valueFamily"
+  }
+]
