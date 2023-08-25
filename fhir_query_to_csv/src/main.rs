@@ -1,11 +1,17 @@
+use clap::Parser;
 use dotenv::dotenv;
+use oauth2::basic::BasicClient;
+use oauth2::reqwest::http_client;
+use oauth2::{
+    AuthUrl, ClientId, ClientSecret, ResourceOwnerPassword, ResourceOwnerUsername, Scope,
+    TokenResponse, TokenUrl,
+};
 use serde::Deserialize;
 use std::env;
+use std::fs;
 use std::fs::File;
 use std::io::Write;
 use url::Url;
-use clap::Parser;
-use std::fs;
 
 #[derive(Debug, Deserialize)]
 struct DataPoint {
@@ -35,11 +41,27 @@ async fn main() {
 
     let json_file_path = args.path;
 
-    let  json_content = fs::read_to_string(json_file_path).unwrap();
+    let json_content = fs::read_to_string(json_file_path).unwrap();
 
     let data_points: Vec<DataPoint> = serde_json::from_str(&json_content).unwrap();
 
     let client = reqwest::Client::new();
+    print!("jeff");
+    let auth_client = BasicClient::new(
+        ClientId::new(env::var("CLIENT_ID").expect("BASE_URL not set in .env")),
+        Some(ClientSecret::new(
+            env::var("CLIENT_SECRET").expect("BASE_URL not set in .env"),
+        )),
+        AuthUrl::new(env::var("AUTH_URL").expect("BASE_URL not set in .env")).expect("Base url"),
+        Some(
+            TokenUrl::new(env::var("TOKEN_URL").expect("BASE_URL not set in .env"))
+                .expect("Token url"),
+        ),
+    );
+
+    let token_res = fetch_token(&auth_client).unwrap();
+
+    println!("{}", token_res.access_token().secret());
 
     let file = File::create("output.csv");
     match file {
@@ -67,7 +89,9 @@ async fn main() {
                 // Rebuild the URL with the modified query parameters
                 url.query_pairs_mut().clear().extend_pairs(query_pairs);
 
-                let response = make_authenticated_request(&client, &url.to_string(), &token).await;
+                let response =
+                    make_authenticated_request(&client, &auth_client, &url.to_string(), &token)
+                        .await;
                 match response {
                     Ok(search_result) => {
                         writeln!(
@@ -87,12 +111,38 @@ async fn main() {
     }
 }
 
+fn fetch_token(
+    auth_client: &BasicClient,
+) -> Result<
+    oauth2::StandardTokenResponse<oauth2::EmptyExtraTokenFields, oauth2::basic::BasicTokenType>,
+    oauth2::RequestTokenError<oauth2::reqwest::Error<reqwest::Error>, oauth2::StandardErrorResponse<oauth2::basic::BasicErrorResponseType>>
+> {
+    let token_result = auth_client
+        .exchange_password(
+            &ResourceOwnerUsername::new(
+                env::var("CLIENT_USERNAME").expect("BASE_URL not set in .env"),
+            ),
+            &ResourceOwnerPassword::new(
+                env::var("CLIENT_PASSWORD").expect("BASE_URL not set in .env"),
+            ),
+        )
+        .add_scope(Scope::new("read".to_string()))
+        .request(http_client);
+
+    return token_result;
+}
+
 async fn make_authenticated_request(
     client: &reqwest::Client,
+    auth_client: &BasicClient,
     url: &str,
     token: &str,
 ) -> Result<SearchResult, reqwest::Error> {
-    println!("Making request to: {}", url);
+    println!(
+        "Making request to: {}, {}",
+        url,
+        auth_client.client_id().as_str()
+    );
     let response = client
         .get(url)
         .header("Authorization", format!("Bearer {}", token))
