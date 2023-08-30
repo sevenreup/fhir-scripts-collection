@@ -1,0 +1,608 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "https://fhir.d-tree.org:443/fhir/Patient/92c41ce6-e670-469f-b709-07c878f55ad8",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "92c41ce6-e670-469f-b709-07c878f55ad8",
+        "meta": {
+          "versionId": "2",
+          "lastUpdated": "2023-08-22T11:24:04.533+00:00",
+          "source": "#4414297b052060dd",
+          "tag": [
+            {
+              "system": "http://smartregister.org/fhir/location-tag",
+              "code": "505",
+              "display": "Practitioner Location"
+            },
+            {
+              "system": "https://d-tree.org/fhir/patient-meta-tag",
+              "code": "client-already-on-art",
+              "display": "Person Already on ART"
+            },
+            {
+              "system": "http://smartregister.org/fhir/appid-tag",
+              "code": "tingathe-saa-emr-art-client",
+              "display": "Application ID"
+            },
+            {
+              "system": "http://smartregister.org/fhir/organization-tag",
+              "code": "256",
+              "display": "Practitioner Organization"
+            },
+            {
+              "system": "http://smartregister.org/fhir/practitioner-tag",
+              "code": "465",
+              "display": "Practitioner"
+            },
+            {
+              "system": "http://smartregister.org/fhir/care-team-tag",
+              "code": "6283",
+              "display": "Practitioner CareTeam"
+            }
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Alinet <b>JAMSON </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>1309</td></tr><tr><td>Address</td><td/></tr><tr><td>Date of birth</td><td><span>03 December 1982</span></td></tr></tbody></table></div>"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "value": "1309"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Jamson",
+            "given": ["Alinet "]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1982-12-03",
+        "address": [
+          {
+            "use": "home",
+            "type": "physical"
+          }
+        ],
+        "generalPractitioner": [
+          {
+            "reference": "Practitioner/219"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/92c41ce6-e670-469f-b709-07c878f55ad8"
+      }
+    },
+    {
+      "fullUrl": "https://fhir.d-tree.org:443/fhir/Patient/313b3be8-49d4-42de-a634-34266a0798aa",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "313b3be8-49d4-42de-a634-34266a0798aa",
+        "meta": {
+          "versionId": "2",
+          "lastUpdated": "2023-08-22T11:29:05.826+00:00",
+          "source": "#794b7d5f520cb932",
+          "tag": [
+            {
+              "system": "http://smartregister.org/fhir/location-tag",
+              "code": "505",
+              "display": "Practitioner Location"
+            },
+            {
+              "system": "https://d-tree.org/fhir/patient-meta-tag",
+              "code": "client-already-on-art",
+              "display": "Person Already on ART"
+            },
+            {
+              "system": "http://smartregister.org/fhir/appid-tag",
+              "code": "tingathe-saa-emr-art-client",
+              "display": "Application ID"
+            },
+            {
+              "system": "http://smartregister.org/fhir/organization-tag",
+              "code": "256",
+              "display": "Practitioner Organization"
+            },
+            {
+              "system": "http://smartregister.org/fhir/practitioner-tag",
+              "code": "465",
+              "display": "Practitioner"
+            },
+            {
+              "system": "http://smartregister.org/fhir/care-team-tag",
+              "code": "6283",
+              "display": "Practitioner CareTeam"
+            }
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Evason <b>THETA </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>1359</td></tr><tr><td>Address</td><td/></tr><tr><td>Date of birth</td><td><span>19 May 1975</span></td></tr></tbody></table></div>"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "value": "1359"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Theta",
+            "given": ["Evason"]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "0982664478"
+          },
+          {
+            "system": "other",
+            "value": "Self"
+          },
+          {
+            "system": "other",
+            "value": "Airtel/TNM"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1975-05-19",
+        "address": [
+          {
+            "use": "home",
+            "type": "physical"
+          }
+        ],
+        "generalPractitioner": [
+          {
+            "reference": "Practitioner/14803"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/313b3be8-49d4-42de-a634-34266a0798aa"
+      }
+    },
+    {
+      "fullUrl": "https://fhir.d-tree.org:443/fhir/Patient/c0613b3a-dc87-4d19-8ec7-300b4af8389c",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "c0613b3a-dc87-4d19-8ec7-300b4af8389c",
+        "meta": {
+          "versionId": "2",
+          "lastUpdated": "2023-08-22T11:24:01.291+00:00",
+          "source": "#77389a74f307e816",
+          "tag": [
+            {
+              "system": "http://smartregister.org/fhir/location-tag",
+              "code": "505",
+              "display": "Practitioner Location"
+            },
+            {
+              "system": "https://d-tree.org/fhir/patient-meta-tag",
+              "code": "client-already-on-art",
+              "display": "Person Already on ART"
+            },
+            {
+              "system": "http://smartregister.org/fhir/appid-tag",
+              "code": "tingathe-saa-emr-art-client",
+              "display": "Application ID"
+            },
+            {
+              "system": "http://smartregister.org/fhir/organization-tag",
+              "code": "256",
+              "display": "Practitioner Organization"
+            },
+            {
+              "system": "http://smartregister.org/fhir/practitioner-tag",
+              "code": "465",
+              "display": "Practitioner"
+            },
+            {
+              "system": "http://smartregister.org/fhir/care-team-tag",
+              "code": "6283",
+              "display": "Practitioner CareTeam"
+            }
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Chimwemwe <b>MAULIDI </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>1362</td></tr><tr><td>Address</td><td/></tr><tr><td>Date of birth</td><td><span>02 May 2002</span></td></tr></tbody></table></div>"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "value": "1362"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Maulidi",
+            "given": ["Chimwemwe"]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "2002-05-02",
+        "address": [
+          {
+            "use": "home",
+            "type": "physical"
+          }
+        ],
+        "generalPractitioner": [
+          {
+            "reference": "Practitioner/14803"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/c0613b3a-dc87-4d19-8ec7-300b4af8389c"
+      }
+    },
+    {
+      "fullUrl": "https://fhir.d-tree.org:443/fhir/Patient/d0e275e1-29e5-4b0d-9842-507f38d64377",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "d0e275e1-29e5-4b0d-9842-507f38d64377",
+        "meta": {
+          "versionId": "2",
+          "lastUpdated": "2023-08-22T11:18:17.467+00:00",
+          "source": "#e94fb3f38aa27e43",
+          "tag": [
+            {
+              "system": "http://smartregister.org/fhir/location-tag",
+              "code": "505",
+              "display": "Practitioner Location"
+            },
+            {
+              "system": "https://d-tree.org/fhir/patient-meta-tag",
+              "code": "client-already-on-art",
+              "display": "Person Already on ART"
+            },
+            {
+              "system": "http://smartregister.org/fhir/appid-tag",
+              "code": "tingathe-saa-emr-art-client",
+              "display": "Application ID"
+            },
+            {
+              "system": "http://smartregister.org/fhir/organization-tag",
+              "code": "256",
+              "display": "Practitioner Organization"
+            },
+            {
+              "system": "http://smartregister.org/fhir/practitioner-tag",
+              "code": "465",
+              "display": "Practitioner"
+            },
+            {
+              "system": "http://smartregister.org/fhir/care-team-tag",
+              "code": "6283",
+              "display": "Practitioner CareTeam"
+            }
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Amidu <b>CHANGAMALA </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>1348</td></tr><tr><td>Address</td><td/></tr><tr><td>Date of birth</td><td><span>03 August 1935</span></td></tr></tbody></table></div>"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "value": "1348"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Changamala",
+            "given": ["Amidu "]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "0993881766"
+          },
+          {
+            "system": "other",
+            "value": "Other"
+          },
+          {
+            "system": "other",
+            "value": "Airtel/TNM"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1935-08-03",
+        "address": [
+          {
+            "use": "home",
+            "type": "physical"
+          }
+        ],
+        "generalPractitioner": [
+          {
+            "reference": "Practitioner/217"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/d0e275e1-29e5-4b0d-9842-507f38d64377"
+      }
+    },
+    {
+      "fullUrl": "https://fhir.d-tree.org:443/fhir/Patient/14b6c00b-97d3-4ca4-a145-327283bc9a9b",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "14b6c00b-97d3-4ca4-a145-327283bc9a9b",
+        "meta": {
+          "versionId": "2",
+          "lastUpdated": "2023-08-22T11:20:33.721+00:00",
+          "source": "#4e3a9464e2b1ab7b",
+          "tag": [
+            {
+              "system": "http://smartregister.org/fhir/location-tag",
+              "code": "505",
+              "display": "Practitioner Location"
+            },
+            {
+              "system": "https://d-tree.org/fhir/patient-meta-tag",
+              "code": "client-already-on-art",
+              "display": "Person Already on ART"
+            },
+            {
+              "system": "http://smartregister.org/fhir/appid-tag",
+              "code": "tingathe-saa-emr-art-client",
+              "display": "Application ID"
+            },
+            {
+              "system": "http://smartregister.org/fhir/organization-tag",
+              "code": "256",
+              "display": "Practitioner Organization"
+            },
+            {
+              "system": "http://smartregister.org/fhir/practitioner-tag",
+              "code": "465",
+              "display": "Practitioner"
+            },
+            {
+              "system": "http://smartregister.org/fhir/care-team-tag",
+              "code": "6283",
+              "display": "Practitioner CareTeam"
+            }
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Elson <b>PHIRI </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>1393</td></tr><tr><td>Address</td><td/></tr><tr><td>Date of birth</td><td><span>10 June 1978</span></td></tr></tbody></table></div>"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "value": "1393"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Phiri",
+            "given": ["Elson"]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "0991040871"
+          },
+          {
+            "system": "other",
+            "value": "Self"
+          },
+          {
+            "system": "other",
+            "value": "Airtel/TNM"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1978-06-10",
+        "address": [
+          {
+            "use": "home",
+            "type": "physical"
+          }
+        ],
+        "generalPractitioner": [
+          {
+            "reference": "Practitioner/14803"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/14b6c00b-97d3-4ca4-a145-327283bc9a9b"
+      }
+    },
+    {
+      "fullUrl": "https://fhir.d-tree.org:443/fhir/Patient/0faffbf5-1649-4221-8511-290e6b4378ce",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "0faffbf5-1649-4221-8511-290e6b4378ce",
+        "meta": {
+          "versionId": "2",
+          "lastUpdated": "2023-08-22T11:23:52.276+00:00",
+          "source": "#e09044961939c923",
+          "tag": [
+            {
+              "system": "http://smartregister.org/fhir/location-tag",
+              "code": "505",
+              "display": "Practitioner Location"
+            },
+            {
+              "system": "https://d-tree.org/fhir/patient-meta-tag",
+              "code": "client-already-on-art",
+              "display": "Person Already on ART"
+            },
+            {
+              "system": "http://smartregister.org/fhir/appid-tag",
+              "code": "tingathe-saa-emr-art-client",
+              "display": "Application ID"
+            },
+            {
+              "system": "http://smartregister.org/fhir/organization-tag",
+              "code": "256",
+              "display": "Practitioner Organization"
+            },
+            {
+              "system": "http://smartregister.org/fhir/practitioner-tag",
+              "code": "465",
+              "display": "Practitioner"
+            },
+            {
+              "system": "http://smartregister.org/fhir/care-team-tag",
+              "code": "6283",
+              "display": "Practitioner CareTeam"
+            }
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Zione <b>GEARGE </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>643</td></tr><tr><td>Address</td><td/></tr><tr><td>Date of birth</td><td><span>01 June 1989</span></td></tr></tbody></table></div>"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "value": "643"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Gearge",
+            "given": ["Zione"]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1989-06-01",
+        "address": [
+          {
+            "use": "home",
+            "type": "physical"
+          }
+        ],
+        "generalPractitioner": [
+          {
+            "reference": "Practitioner/217"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/0faffbf5-1649-4221-8511-290e6b4378ce"
+      }
+    },
+    {
+      "fullUrl": "https://fhir.d-tree.org:443/fhir/Patient/e3dc52db-1bd5-4200-879b-f64f5792acf0",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "e3dc52db-1bd5-4200-879b-f64f5792acf0",
+        "meta": {
+          "versionId": "2",
+          "lastUpdated": "2023-08-22T11:24:26.319+00:00",
+          "source": "#dc7b6e24a4fd4f11",
+          "tag": [
+            {
+              "system": "http://smartregister.org/fhir/location-tag",
+              "code": "505",
+              "display": "Practitioner Location"
+            },
+            {
+              "system": "https://d-tree.org/fhir/patient-meta-tag",
+              "code": "client-already-on-art",
+              "display": "Person Already on ART"
+            },
+            {
+              "system": "http://smartregister.org/fhir/appid-tag",
+              "code": "tingathe-saa-emr-art-client",
+              "display": "Application ID"
+            },
+            {
+              "system": "http://smartregister.org/fhir/organization-tag",
+              "code": "256",
+              "display": "Practitioner Organization"
+            },
+            {
+              "system": "http://smartregister.org/fhir/practitioner-tag",
+              "code": "465",
+              "display": "Practitioner"
+            },
+            {
+              "system": "http://smartregister.org/fhir/care-team-tag",
+              "code": "6283",
+              "display": "Practitioner CareTeam"
+            }
+          ]
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Samuel <b>INNOCK </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>650</td></tr><tr><td>Address</td><td/></tr><tr><td>Date of birth</td><td><span>04 April 1968</span></td></tr></tbody></table></div>"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "value": "650"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Innock",
+            "given": ["Samuel"]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "0886587032"
+          },
+          {
+            "system": "other",
+            "value": "Self"
+          },
+          {
+            "system": "other",
+            "value": "Airtel/TNM"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1968-04-04",
+        "address": [
+          {
+            "use": "home",
+            "type": "physical"
+          }
+        ],
+        "generalPractitioner": [
+          {
+            "reference": "Practitioner/264"
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/e3dc52db-1bd5-4200-879b-f64f5792acf0"
+      }
+    }
+  ]
+}
