@@ -5,7 +5,7 @@
 const fs = require("fs");
 
 // read the file data.json and parse the json into a javascript object
-fs.readFile("data.json", "utf8", (err, data) => {
+fs.readFile("data/data.json", "utf8", (err, data) => {
   if (err) {
     console.log(err);
   } else {
@@ -20,9 +20,11 @@ fs.readFile("data.json", "utf8", (err, data) => {
         identifier = patient.identifier[0].value;
       }
       const address = patient.address[0];
+      const id = patient.id;
 
       const name = patient.name[0].given[0] + " " + patient.name[0].family;
       return {
+        id,
         name,
         gender,
         identifier,
@@ -37,8 +39,8 @@ fs.readFile("data.json", "utf8", (err, data) => {
     console.log({ count: patients.length, patients });
 
     const csv = patients.reduce((acc, patient) => {
-      return `${acc}\n${patient.identifier},${patient.name},${patient.gender},"${patient.addressText}",${patient.district},${patient.state},${patient.dob},${patient.lastUpdated}`;
-    }, "Id,Name,Gender,Address Text,Address District,Address State,DOB,lastUpdated");
+      return `${acc}\n${patient.id},${patient.identifier},${patient.name},${patient.gender},"${patient.addressText}",${patient.district},${patient.state},${patient.dob},${patient.lastUpdated}`;
+    }, "UUID,Id,Name,Gender,Address Text,Address District,Address State,DOB,lastUpdated");
 
     fs.writeFile("data.csv", csv, (err) => {
       if (err) {

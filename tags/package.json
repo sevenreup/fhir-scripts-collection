@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "axios": "^1.5.0",
+    "csv-parser": "^3.0.0",
+    "fast-json-patch": "^3.1.1",
+    "rfc6902": "^5.0.1"
+  }
+}
