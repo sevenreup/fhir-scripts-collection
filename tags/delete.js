@@ -63,15 +63,6 @@ function readJSON(filePath) {
   });
 }
 
-const xmlBase = (entries) => `
-<?xml version="1.0" encoding="UTF-8"?>
-<Bundle xmlns="http://hl7.org/fhir">
-  <id value="bundle-transaction" />
-  <type value="transaction" />
-  ${entries}
-</Bundle> 
-`;
-
 const deleteRequestXml = (patientId) => `
 <Parameters
 	xmlns="http://hl7.org/fhir">
