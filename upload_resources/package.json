@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "fhir": "^4.12.0"
+  }
+}
