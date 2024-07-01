@@ -1,16 +1,17 @@
+use clap::Parser;
 use dotenv::dotenv;
 use serde::Deserialize;
 use std::env;
+use std::fs;
 use std::fs::File;
 use std::io::Write;
 use url::Url;
-use clap::Parser;
-use std::fs;
 
 #[derive(Debug, Deserialize)]
 struct DataPoint {
     column_name: String,
     filter: String,
+    base_resource: String,
 }
 
 #[derive(Debug, Deserialize)]
@@ -35,7 +36,7 @@ async fn main() {
 
     let json_file_path = args.path;
 
-    let  json_content = fs::read_to_string(json_file_path).unwrap();
+    let json_content = fs::read_to_string(json_file_path).unwrap();
 
     let data_points: Vec<DataPoint> = serde_json::from_str(&json_content).unwrap();
 
@@ -47,7 +48,9 @@ async fn main() {
             writeln!(csv_output, "Column Name,Total").unwrap();
 
             for data_point in &data_points {
-                let mut url = Url::parse(format!("{}/Patient", base_url).as_str()).unwrap();
+                let mut url =
+                    Url::parse(format!("{}/{}", base_url, data_point.base_resource).as_str())
+                        .unwrap();
                 url.query_pairs_mut().append_pair("_summary", "count");
 
                 let mut query_pairs: Vec<(String, String)> =

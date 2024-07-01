@@ -6,7 +6,8 @@ A file containing an array of DataPoints to get the count for
 [
   {
     "column_name": "With name",
-    "filter": "given=valueGiven&family=valueFamily"
+    "filter": "given=valueGiven&family=valueFamily",
+    "base_resource": "Patient"
   }
 ]
 ```
